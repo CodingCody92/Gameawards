@@ -1,0 +1,30 @@
+.head {
+    background-color: rgba(12, 12, 12, 0.39);
+    height: 100vh;
+    position: relative;
+}
+
+@mixin bkgndSettings {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin bkgndFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head:before {
+    content: '';
+    background-image: url(../imgs/gga3.png);
+    @include bkgndSettings();
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @include bkgndFlex();
+}

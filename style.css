@@ -1,0 +1,329 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goldman&family=Montserrat&family=Poppins&display=swap");
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #293d96;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(41, 61, 150, 0.9052)), color-stop(98%, rgba(0, 0, 0, 0.863183)), color-stop(99%, rgba(205, 202, 55, 0.790354)));
+  background: linear-gradient(0deg, rgba(41, 61, 150, 0.9052) 0%, rgba(0, 0, 0, 0.863183) 98%, rgba(205, 202, 55, 0.790354) 99%);
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 30px;
+  color: #cccccc;
+  font-family: "Goldman", cursive;
+}
+
+.logo #st {
+  color: #13bebe;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  display: inline-block;
+}
+
+header .navbar ul li a {
+  font-size: 10px;
+  display: block;
+  text-decoration: none;
+  color: #ebebeb;
+  padding: 20px;
+  font-family: "Goldman", cursive;
+}
+
+header .navbar ul li a:hover {
+  background: #0d497a;
+  padding: 13px;
+  color: white;
+  border-radius: 10px;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  /* resets display */
+  display: initial;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .btn {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  background: #0d497a;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+header .btn:hover {
+  background: #cdd1cd;
+  -webkit-transition: all ease-in .3s;
+  transition: all ease-in .3s;
+}
+
+#appoint {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+    color: #0d497a;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #d7dddd;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  header .btn {
+    display: none;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+    -webkit-transition: ease-in;
+    transition: ease-in;
+  }
+  #appoint {
+    display: initial;
+  }
+}
+
+.head {
+  background-color: rgba(12, 12, 12, 0.39);
+  height: 100vh;
+  position: relative;
+}
+
+.head:before {
+  content: '';
+  background-image: url(../imgs/gga3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.goty h2 {
+  font-family: 'Goldman', cursive;
+}
+
+html {
+  font-size: 100%;
+  font-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #5f0575;
+}
+
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container {
+  max-width: 80rem;
+  width: 100%;
+  height: auto;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.text {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  text-rendering: optimizeLegibility;
+}
+
+.text-title {
+  font-size: 1.25rem;
+  color: #d32f2f;
+}
+
+.paragraph {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: inherit;
+  margin: 0.25rem 0;
+  text-transform: unset;
+  text-rendering: optimizeLegibility;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main .scroll {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  margin: 2.5rem 0;
+  cursor: default;
+  overflow: scroll hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-padding: 0px 1.25rem;
+  scrollbar-width: none;
+}
+
+.main .scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.main .scroll.active {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.main .scroll .card {
+  width: 16rem;
+  height: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0 0.75rem;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  background: #ffffff;
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.main .scroll .card-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-top: 110%;
+}
+
+.main .scroll .card-image img.responsive {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .scroll .card-inner {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

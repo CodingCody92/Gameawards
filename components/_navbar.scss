@@ -1,0 +1,123 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Goldman&family=Montserrat&family=Poppins&display=swap');
+@mixin navFlex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header {
+    @include navFlex();
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(41, 61, 150);
+    background: linear-gradient(0deg, rgba(41, 61, 150, 0.9051995798319328) 0%, rgba(0, 0, 0, 0.8631827731092436) 98%, rgba(205, 202, 55, 0.7903536414565826) 99%);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.logo {
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(204, 204, 204);
+    font-family: $font;
+}
+
+.logo #st {
+    color: rgb(19, 190, 190);
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    display: inline-block;
+}
+
+header .navbar ul li a {
+    font-size: 10px;
+    display: block;
+    text-decoration: $noDecor;
+    color: rgb(235, 235, 235);
+    padding: 20px;
+    font-family: $font;
+}
+
+header .navbar ul li a:hover {
+    background: rgb(13, 73, 122);
+    padding: 13px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+header .navbar ul li:focus-within>ul,
+header .navbar ul li:hover>ul {
+    /* resets display */
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .btn {
+    text-decoration: $noDecor;
+    font-family: $headerFont;
+    background: $blueColor;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+header .btn:hover {
+    background: rgb(205, 209, 205);
+    transition: all ease-in .3s;
+}
+
+#appoint {
+    display: none;
+}
+
+@media(max-width: 991px) {
+    header {
+        padding: 20px;
+    }
+    header label {
+        display: initial;
+        color: $blueColor;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgb(215, 221, 221);
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+    header .btn {
+        display: none;
+    }
+    header .navbar ul li {
+        width: 100%;
+    }
+    #menu-bar:checked~.navbar {
+        display: initial;
+        transition: ease-in;
+    }
+    #appoint {
+        display: initial;
+    }
+}
