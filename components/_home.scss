@@ -19,7 +19,7 @@
 
 .head:before {
     content: '';
-    background-image: url(../imgs/gga3.png);
+    background-image: url(imgs/gga3.png);
     @include bkgndSettings();
     position: absolute;
     top: 0;
