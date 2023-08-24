@@ -2,6 +2,7 @@
 @import './components/variables';
 @import './components/navbar';
 @import './components/home';
+@import './components/games';
 .goty h2 {
     font-family: 'Goldman', cursive;
 }
@@ -31,7 +32,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    background: #5f0575;
+    background: rgb(41, 61, 150);
+    background: linear-gradient(0deg, rgba(41, 61, 150, 0.9051995798319328) 0%, rgba(0, 0, 0, 0.8631827731092436) 98%, rgba(205, 202, 55, 0.7903536414565826) 99%);
 }
 
 a,
@@ -70,7 +72,8 @@ video {
     text-rendering: optimizeLegibility;
     &-title {
         font-size: 1.25rem;
-        color: $color-red;
+        color: rgb(255, 255, 255);
+        font-family: $font;
     }
 }
 
@@ -127,7 +130,7 @@ video {
             outline: none;
             border-radius: 0.25rem;
             background: $color-white;
-            box-shadow: $box-shadow;
+            box-shadow: 1px 1px 1px 1px rgb(39, 39, 39);
             &-image {
                 position: relative;
                 display: block;
@@ -148,6 +151,9 @@ video {
                 width: 100%;
                 height: auto;
                 padding: 1rem;
+                background-color: #293d96;
+                // box-shadow: 1px 1px 1px 1px black;
+                color: #e0e0e0;
             }
         }
     }

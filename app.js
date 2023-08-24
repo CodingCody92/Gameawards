@@ -23,7 +23,7 @@ var scrollX;
 var scrollLeft;
 
 // Mouse Up Function
-// happens when you relese the mouse button
+// happens when you release the mouse button
 scroll.addEventListener("mouseup", () => {
     isDown = false;
     scroll.classList.remove("active");
