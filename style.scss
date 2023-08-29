@@ -1,160 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
-@import './components/variables';
-@import './components/navbar';
 @import './components/home';
-@import './components/games';
-.goty h2 {
+@import './components/navbar';
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Goldman&family=Handjet:wght@300&family=Montserrat&family=Oswald:wght@300;600&family=Poppins&display=swap');
+body {
+    background-color: rgb(22, 22, 22);
+}
+
+.media-scroller {
+    --_spacer: var(--size-3);
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    padding: 0 var(--_spacer) var(--_spacer);
+    scrollbar-color: red;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.media-scroller--with-groups {
+    grid-auto-columns: 80%;
+}
+
+.media-group {
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: column;
+}
+
+.media-element {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--_spacer);
+    padding: var(--_spacer);
+    background: var(--surface-2);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+}
+
+.media-element>img {
+    inline-size: 100%;
+    aspect-ratio: 1/1;
+    object-fit: fill;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline>* {
+    scroll-snap-align: start;
+}
+
+
+/* general styling */
+
+.container {
+    inline-size: min(100 - 4px, 70px);
+    margin-inline: auto;
+}
+
+.flow {
+    display: grid;
+    gap: var(--size-3);
+}
+
+.page-header {
+    padding-block: var(--size-9);
+    margin-block-end: var(--size-9);
+    background: var(--gradient-16);
+    color: var(--gray-0);
+    box-shadow: var(--shadow-2);
+}
+
+.page-title {
+    font-size: var(--font-size-fluid-3);
+}
+
+.page-subtitle {
+    font-size: var(--font-size-fluid-1);
+}
+
+.section-title {
+    padding-inline-start: var(--size-6);
+    margin-block: var(--size-9) var(--size-3);
+    color: #fff;
     font-family: 'Goldman', cursive;
 }
 
-html {
-    font-size: 100%;
-    font-size-adjust: 100%;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
-    list-style: none;
-    list-style-type: none;
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-}
-
-body {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background: rgb(41, 61, 150);
-    background: linear-gradient(0deg, rgba(41, 61, 150, 0.9051995798319328) 0%, rgba(0, 0, 0, 0.8631827731092436) 98%, rgba(205, 202, 55, 0.7903536414565826) 99%);
-}
-
-a,
-button {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background: none;
-    text-decoration: none;
-}
-
-img,
-video {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-// Elements
-.container {
-    max-width: 80rem;
-    width: 100%;
-    height: auto;
-    padding: 0 2rem;
-    margin: 0 auto;
-}
-
-.text {
-    font-family: inherit;
-    font-weight: 700;
-    line-height: inherit;
-    text-rendering: optimizeLegibility;
-    &-title {
-        font-size: 1.25rem;
-        color: rgb(255, 255, 255);
-        font-family: $font;
-    }
-}
-
-.paragraph {
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: inherit;
-    margin: 0.25rem 0;
-    text-transform: unset;
-    text-rendering: optimizeLegibility;
-}
-
-.truncate {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-// Main
-.main {
-    .scroll {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        padding: 1rem 0;
-        margin: 2.5rem 0;
-        cursor: default;
-        overflow: scroll hidden;
-        scroll-snap-type: x mandatory;
-        scroll-padding: 0px 1.25rem;
-        scrollbar-width: none;
-        &::-webkit-scrollbar {
-            display: none;
-        }
-        &.active {
-            cursor: grab;
-            cursor: -webkit-grab;
-        }
-        .card {
-            width: 16rem;
-            height: auto;
-            flex: 0 0 auto;
-            margin: 0 0.75rem;
-            border: none;
-            outline: none;
-            border-radius: 0.25rem;
-            background: $color-white;
-            box-shadow: 1px 1px 1px 1px rgb(39, 39, 39);
-            &-image {
-                position: relative;
-                display: block;
-                width: 100%;
-                height: auto;
-                padding-top: 110%;
-                img.responsive {
-                    position: absolute;
-                    display: block;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            &-inner {
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-                background-color: #293d96;
-                // box-shadow: 1px 1px 1px 1px black;
-                color: #e0e0e0;
-            }
-        }
-    }
+.title {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
