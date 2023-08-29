@@ -81,6 +81,12 @@
   }
 }
 
+@media (max-width: 950px) {
+  .head:before {
+    background-image: url(imgs/gga3mob.png);
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
