@@ -57,3 +57,27 @@
     color: #fff;
     font-size: 18pt;
 }
+
+@media(max-width: 1270px) {
+    .about {
+        max-width: 50%;
+    }
+}
+
+@media(max-width: 700px) {
+    .about {
+        max-width: 80%;
+    }
+}
+
+@media(max-width: 475px) {
+    .about {
+        max-width: 100%;
+    }
+    .txt {
+        font-size: 8pt;
+    }
+    .abt-txt {
+        margin-left: 10px;
+    }
+}

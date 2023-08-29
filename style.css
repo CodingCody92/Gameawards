@@ -57,6 +57,30 @@
   font-size: 18pt;
 }
 
+@media (max-width: 1270px) {
+  .about {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 475px) {
+  .about {
+    max-width: 100%;
+  }
+  .txt {
+    font-size: 8pt;
+  }
+  .abt-txt {
+    margin-left: 10px;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,5 +309,23 @@ body {
 .title {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 875px) {
+  .title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 7px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
