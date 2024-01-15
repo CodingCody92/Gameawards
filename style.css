@@ -251,6 +251,10 @@ body {
           align-items: center;
 }
 
+.win-ctn {
+  padding: 30px;
+}
+
 .hover-img {
   background-color: #000;
   color: #fff;
@@ -360,6 +364,12 @@ div.scroll-container img {
 .title {
   color: #fff;
   font-family: 'Montserrat', sans-serif;
+}
+
+.desc {
+  font-family: "Handjet", cursive;
+  font-size: 25px;
+  color: #d8d8d8;
 }
 
 @media (max-width: 875px) {
