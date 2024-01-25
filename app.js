@@ -14,3 +14,26 @@ window.onscroll = () => {
 bars.addEventListener('click', () => {
     bars.style.color = 'black';
 })
+
+
+const gameOfTheYear = [{
+        game: "Resident Evil 4 Remake",
+        year: 2023,
+        developer: "Capcom",
+        score: 97,
+        dlc: "Yes",
+        winner: "Yes"
+    },
+
+    {
+        game: "Alan Wake 2",
+        year: 2023,
+        developer: "Remedy",
+        score: 95,
+        dlc: "No",
+        winner: "No"
+    }
+]
+
+const gameWinner = gameOfTheYear.filter(win.win.winner);
+console.log(gameWinner);
